@@ -1,0 +1,34 @@
+ATTRIBUTION AND LICENSING STATUS - LOCAL REVIEW ONLY
+This note is not a project license and grants no new rights.
+Object: dist/paiec_reproduction_review.zip; SHA-256 267b9d0050837a9d05ad5a47ccce78594fedf2770c19e8f39af1282f07045f9e; 122260 bytes.
+
+1. Project-maintained implementation
+The archive has 14 Python members. Eleven source members are bound to local executed-source snapshots in SOURCE_ORIGINS.json. The runtime model is derived from project coldstart and spike-Beta modules; runtime/features.py copies the subject-only feature serializer. replay.py is the local archive helper. Local provenance does not establish exclusive originality or a human copyright owner. No project-wide source license has yet been declared or applied.
+OpenAI Codex assistance was used for implementation, debugging, analysis, and writing; this statement is an assistance disclosure, not a copyright assignment.
+
+2. Official competition materials referenced
+Repository: https://github.com/aims-foundations/paiec_baseline
+Reference commit: 82d330ddcdb16016a3ae9e048db7e588ba2c6a39
+The official fixed-commit root/tree and README checks found no LICENSE/COPYING file or explicit license grant. Preserve this unknown status; public visibility does not itself supply redistribution terms. The current review archive does not include the BLE source tree, official checker, or official empirical-mean model. Existing local records establish interface/training-corpus references, not a conclusive third-party code-copy determination for each project source.
+
+3. Training-time software dependencies (not vendored)
+- numpy 1.26.4: BSD-3-Clause (primary project; see full bundled notices).
+- scipy 1.13.1: BSD-3-Clause (primary project; see full bundled notices).
+- scikit-learn 1.4.2: BSD-3-Clause.
+- pandas 2.2.2: BSD-3-Clause.
+- pyarrow 23.0.1: Apache-2.0 (primary project; see full bundled notices).
+Full notices from the installed distributions are retained under assets/licensing/dependencies for review; their embedded component notices remain applicable to those distributions. Merely importing a package is not a claim that its source/binaries are included here. The frozen runtime uses the Python standard library plus its included local features module.
+
+4. Data sources and scope
+MDB source: https://huggingface.co/datasets/aims-foundations/measurement-db
+Fixed revision: 54074453da7b9911be0f48e4c560be547bc84d21
+The following are catalog-field transcriptions; they must not be expanded into a blanket license for all response observations, labels, normalized files, or derived artifacts:
+- ResearchCodeBench (runtime training and development): unknown Source: https://researchcodebench.github.io/
+- REAL (runtime training and development): unknown Source: https://realevals.xyz/api/getVerifiedModelData
+- StatQA (runtime training and development): GPL-3.0 as declared by the original repository LICENSE. This capture includes the released benchmark definitions and outputs, not unrelated upstream Kaggle datasets. Source: https://github.com/HKUSTDial/StatQA
+- TruthfulQA-MC (runtime training and development): TruthfulQA questions: Apache-2.0. Leaderboard observations: public original releases; no separate data license is declared in the captured dataset cards. Reference harness: MIT. Source: https://huggingface.co/open-llm-leaderboard-old
+- CMMLU (development only; excluded from S4 runtime fitting): CMMLU questions use CC-BY-NC-SA-4.0; the OpenCompass prediction release does not declare a separate license. Source: https://huggingface.co/datasets/opencompass/compass_academic_predictions
+The source review archive contains no Parquet, JSONL, CSV, or TSV body. It includes input identity metadata, allowed-list metadata, small provenance receipts, and model artifacts. The generated logistic coefficients/calibration are not pretrained target-model weights. Their presence does not establish upstream permission to redistribute data or derived artifacts. Training-pool/public-catalog status and authenticated access are distinct from redistribution permission. Reviewers must obtain data under its actual access conditions.
+
+5. Remaining publication decisions
+Human rights-holder identity, the project-code license, the exact material to publish, and the publication action remain to be confirmed. No MIT, Apache, BSD, or other blanket license has been assigned by this note. No archive, report, dataset, model artifact, or notice has been uploaded or published in this preparation step. Existing specifically authorized private competition-upload scope is unchanged.

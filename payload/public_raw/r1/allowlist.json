@@ -1,0 +1,15 @@
+{
+  "benchmarks": [
+    {
+      "directory": "researchcodebench",
+      "source": "Official PAIEC baseline public-training corpus: https://github.com/aims-foundations/paiec_baseline/blob/82d330ddcdb16016a3ae9e048db7e588ba2c6a39/tools/prepare_data.py; active catalog: https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/formatted_tables/benchmarks.parquet. Training-pool attribution is based on the official training repository plus this active catalog, not an organizer per-benchmark written statement.",
+      "training_pool": true
+    },
+    {
+      "directory": "real_webagents",
+      "source": "Official PAIEC baseline public-training corpus: https://github.com/aims-foundations/paiec_baseline/blob/82d330ddcdb16016a3ae9e048db7e588ba2c6a39/tools/prepare_data.py; active catalog: https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/formatted_tables/benchmarks.parquet. Training-pool attribution is based on the official training repository plus this active catalog, not an organizer per-benchmark written statement.",
+      "training_pool": true
+    }
+  ],
+  "hf_revision": "54074453da7b9911be0f48e4c560be547bc84d21"
+}

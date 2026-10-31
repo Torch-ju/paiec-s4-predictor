@@ -1,0 +1,148 @@
+{
+  "data_payload_included": false,
+  "expected_new_data_bytes": 1867616744,
+  "raw_bytes": 14084877,
+  "raw_tables": [
+    {
+      "bytes": 8321,
+      "path": "payload/public_raw/r1/researchcodebench/formatted_tables/subjects.parquet",
+      "sha256": "c8dbb5ac589749270ddea2be6e456ea22b991d5ffc5107fd80d0865a77e94b3a",
+      "table": "subjects",
+      "task": "researchcodebench"
+    },
+    {
+      "bytes": 8928605,
+      "path": "payload/public_raw/r1/researchcodebench/formatted_tables/items.parquet",
+      "sha256": "3aee135afa6b206cbce8867beca681811d95579db34a0c0eed1822d8c6b01268",
+      "table": "items",
+      "task": "researchcodebench"
+    },
+    {
+      "bytes": 137904,
+      "path": "payload/public_raw/r1/researchcodebench/formatted_tables/responses.parquet",
+      "sha256": "318c067d86f35dd057e6b4d33114d4ae46447c9ef91e1b4bddba7667fc8c0375",
+      "table": "responses",
+      "task": "researchcodebench"
+    },
+    {
+      "bytes": 16499,
+      "path": "payload/public_raw/r1/researchcodebench/formatted_tables/benchmarks.parquet",
+      "sha256": "935efcdc5dac86f2f292f0cd8c772600595dc09cf81adff20bb43e271c21ae30",
+      "table": "benchmarks",
+      "task": "researchcodebench"
+    },
+    {
+      "bytes": 8365,
+      "path": "payload/public_raw/r1/real_webagents/formatted_tables/subjects.parquet",
+      "sha256": "e563ff232af0d2241220e9857cdc65c64b67b9301aae594677a60ff3308e7fa5",
+      "table": "subjects",
+      "task": "real_webagents"
+    },
+    {
+      "bytes": 48588,
+      "path": "payload/public_raw/r1/real_webagents/formatted_tables/items.parquet",
+      "sha256": "5908db1f903c608e00911d50ca7ec0fa0e1b5bf4a09365d4ad52e0e1fde8f136",
+      "table": "items",
+      "task": "real_webagents"
+    },
+    {
+      "bytes": 94908,
+      "path": "payload/public_raw/r1/real_webagents/formatted_tables/responses.parquet",
+      "sha256": "56d1fca0b984a30701f165f550e979d96c71b79af3b11a482e4eba5771065213",
+      "table": "responses",
+      "task": "real_webagents"
+    },
+    {
+      "bytes": 16703,
+      "path": "payload/public_raw/r1/real_webagents/formatted_tables/benchmarks.parquet",
+      "sha256": "747b4a61dabe1fbc9f212dfff3cb7afb3a0b7480e6da1eb5e001ea30d60b0c9a",
+      "table": "benchmarks",
+      "task": "real_webagents"
+    },
+    {
+      "bytes": 9893,
+      "path": "payload/public_raw/r2_statqa/statqa/formatted_tables/subjects.parquet",
+      "sha256": "f2ef9f0fffd3ed524f16dfe4bdb6e9f7e4841edc07db4f6124df8453eb0af6ed",
+      "table": "subjects",
+      "task": "statqa"
+    },
+    {
+      "bytes": 696538,
+      "path": "payload/public_raw/r2_statqa/statqa/formatted_tables/items.parquet",
+      "sha256": "56d495ac71c3c741ce45b78d309bfa3d4654042df276db64f94c1e9a08554691",
+      "table": "items",
+      "task": "statqa"
+    },
+    {
+      "bytes": 1208767,
+      "path": "payload/public_raw/r2_statqa/statqa/formatted_tables/responses.parquet",
+      "sha256": "e4132481cc3d73f0b9846d1a2184f2dd5ee794abca7049251b863739b6fb4521",
+      "table": "responses",
+      "task": "statqa"
+    },
+    {
+      "bytes": 18768,
+      "path": "payload/public_raw/r2_statqa/statqa/formatted_tables/benchmarks.parquet",
+      "sha256": "f86fde7a597216027eed6b8f9bb614db5092eb90c725a041cdd5e3d990707314",
+      "table": "benchmarks",
+      "task": "statqa"
+    },
+    {
+      "bytes": 28499,
+      "path": "payload/public_raw/r3_truthfulqa/truthfulqa_mc/formatted_tables/subjects.parquet",
+      "sha256": "e8daab04e0b649e7b4fec0d287a6747382e755835c2282c0d8a0c7286b4af781",
+      "table": "subjects",
+      "task": "truthfulqa_mc"
+    },
+    {
+      "bytes": 258185,
+      "path": "payload/public_raw/r3_truthfulqa/truthfulqa_mc/formatted_tables/items.parquet",
+      "sha256": "b47d549ab5ffd657eea9ea2dc8992e656f86a86d9a24762d96a6b2d5644e4449",
+      "table": "items",
+      "task": "truthfulqa_mc"
+    },
+    {
+      "bytes": 2586569,
+      "path": "payload/public_raw/r3_truthfulqa/truthfulqa_mc/formatted_tables/responses.parquet",
+      "sha256": "57bbf6b3bf12e82b439fc69cb2fd59a0f11706b4cebb863d0d541e49b27a2870",
+      "table": "responses",
+      "task": "truthfulqa_mc"
+    },
+    {
+      "bytes": 17765,
+      "path": "payload/public_raw/r3_truthfulqa/truthfulqa_mc/formatted_tables/benchmarks.parquet",
+      "sha256": "32368320935fb91da785d2e50ab3bb20fbc7c0b04b8989417c3daf8590fe0c2f",
+      "table": "benchmarks",
+      "task": "truthfulqa_mc"
+    }
+  ],
+  "repository": "aims-foundations/measurement-db",
+  "revision": "54074453da7b9911be0f48e4c560be547bc84d21",
+  "s4_prepared_inputs": [
+    {
+      "path": "runs/20261016_raw_input_reproduction/r1_partitions/researchcodebench/heldout.jsonl",
+      "records": 6784,
+      "sha256": "53394dc05debf69096ec3210e0570f54becb432b3405f815250e66a43fde067b",
+      "task": "researchcodebench"
+    },
+    {
+      "path": "runs/20261016_raw_input_reproduction/r1_partitions/real_webagents/heldout.jsonl",
+      "records": 4449,
+      "sha256": "c537a5c1297303c088ddc4e7dff1991f0b5b3275d31313f104074445fbd2d1c2",
+      "task": "real_webagents"
+    },
+    {
+      "path": "runs/20261016_raw_input_reproduction/normalized/r2_statqa/records.jsonl",
+      "records": 44194,
+      "sha256": "9302059479242986f3fbd56d1fb30b269828b967800ef97259008f270b8302e6",
+      "task": "statqa"
+    },
+    {
+      "path": "runs/20261016_raw_input_reproduction/normalized/r3_truthfulqa/records.jsonl",
+      "records": 122550,
+      "sha256": "fb155648730d487687ef00b30854206261b35d920341e9def042c6aece8ee846",
+      "task": "truthfulqa_mc"
+    }
+  ],
+  "schema": "paiec-reproduction-review-inputs-v1"
+}

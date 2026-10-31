@@ -1,0 +1,7 @@
+# Required only for public-data preparation and training reproduction.
+# The four-member runtime package uses the Python standard library.
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.4.2
+pandas==2.2.2
+pyarrow==23.0.1

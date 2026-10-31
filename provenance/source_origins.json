@@ -1,0 +1,46 @@
+{
+  "coldstart/features.py": {
+    "sha256": "a5fb8df7be3bf383d60855d468d89210d1c9150757aeb19ae48696b0491794b0",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/coldstart/features.py"
+  },
+  "feature_ablation/subject_only/features.py": {
+    "sha256": "e247861caf64cf50a8f05094c7e4d9f495702825867b6865a603155de50af5c6",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/feature_ablation/subject_only/features.py"
+  },
+  "tools/fit_s4_shared_calibration.py": {
+    "sha256": "339dc697103d9da0654e5ab4cbb3895ee35ecedb26e2aa16a14dd1204970e50d",
+    "source_snapshot": "runs/20261016_s4_real_reproduction/execution/source/tools/fit_s4_shared_calibration.py"
+  },
+  "tools/local_evaluation.py": {
+    "sha256": "ccfa1e07cea398fc1c910d96133ce27fcf277ead6e1e1a53aec749ce066ec92e",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/local_evaluation.py"
+  },
+  "tools/prepare_public_data.py": {
+    "sha256": "778264e123fc1591bc440b1666f15b0dbd04738313dfab26c15e78eb854060ff",
+    "source_snapshot": "runs/20261016_raw_input_reproduction/source/tools/prepare_public_data.py"
+  },
+  "tools/reproduce_final_s4_head.py": {
+    "sha256": "55916aa5f2448c0d3b160a95769fe3cf457db327da748813a8d9663fe045ea72",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/reproduce_final_s4_head.py"
+  },
+  "tools/reproduce_r1_partitions.py": {
+    "sha256": "66d8cf77af29b32dcc41c1c7bf938b47a09f011505f53aedadb71b2bbb4e1239",
+    "source_snapshot": "runs/20261016_raw_input_reproduction/source/tools/reproduce_r1_partitions.py"
+  },
+  "tools/run_kappa_selection.py": {
+    "sha256": "8ea2affd4320ad16bcd1b5a5579009d7bdd8bafe0821c43b21ffc36c9b00ae75",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/run_kappa_selection.py"
+  },
+  "tools/run_multibench_study.py": {
+    "sha256": "c42df6fcd5017b4b458cbd365b25b3c66a0238de257e58024239dd1b79723e8e",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/run_multibench_study.py"
+  },
+  "tools/run_subject_text_nuisance_study.py": {
+    "sha256": "06e91a635fdf6f7c817999e7947d13e7df33434d967cc8569929be766c26e30b",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/run_subject_text_nuisance_study.py"
+  },
+  "tools/train_coldstart.py": {
+    "sha256": "9ff20dc038446714f4af9b762bb3aa178ac84dd14138cfd18e5bd96886c5c4e1",
+    "source_snapshot": "runs/20261016_final_head_reproduction/source/tools/train_coldstart.py"
+  }
+}

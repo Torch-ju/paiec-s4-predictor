@@ -1,0 +1,30 @@
+{
+  "source_archive": "dist\\paiec_s4_source_release_review.zip",
+  "source_archive_sha256": "108dc5b6becff275efdc75ba2f841ea91c68d51749c09da7f1d80d7ebc1c061a",
+  "runtime_archive_sha256": "fe88e5dc6bcfcde35226ee41dca470460a1bf314d2c0efd97d0bc8914158e3b5",
+  "scope": "fixed S4 inference, data preparation, head fitting and calibration; not all historical experiments",
+  "copied_sources": {
+    "coldstart/features.py": "reviewed_source_archive:coldstart/features.py",
+    "feature_ablation/subject_only/features.py": "reviewed_source_archive:feature_ablation/subject_only/features.py",
+    "INPUT_REQUIREMENTS.json": "reviewed_source_archive:INPUT_REQUIREMENTS.json",
+    "payload/public_raw/r1/allowlist.json": "reviewed_source_archive:payload/public_raw/r1/allowlist.json",
+    "payload/public_raw/r2_statqa/allowlist.json": "reviewed_source_archive:payload/public_raw/r2_statqa/allowlist.json",
+    "payload/public_raw/r3_truthfulqa/allowlist.json": "reviewed_source_archive:payload/public_raw/r3_truthfulqa/allowlist.json",
+    "requirements.txt": "reviewed_source_archive:requirements.txt",
+    "runtime/features.py": "reviewed_source_archive:runtime/features.py",
+    "runtime/model.py": "reviewed_source_archive:runtime/model.py",
+    "tools/fit_s4_shared_calibration.py": "reviewed_source_archive:tools/fit_s4_shared_calibration.py",
+    "tools/local_evaluation.py": "reviewed_source_archive:tools/local_evaluation.py",
+    "tools/prepare_public_data.py": "reviewed_source_archive:tools/prepare_public_data.py",
+    "tools/reproduce_final_s4_head.py": "reviewed_source_archive:tools/reproduce_final_s4_head.py",
+    "tools/reproduce_r1_partitions.py": "reviewed_source_archive:tools/reproduce_r1_partitions.py",
+    "tools/run_kappa_selection.py": "reviewed_source_archive:tools/run_kappa_selection.py",
+    "tools/run_multibench_study.py": "reviewed_source_archive:tools/run_multibench_study.py",
+    "tools/run_subject_text_nuisance_study.py": "reviewed_source_archive:tools/run_subject_text_nuisance_study.py",
+    "tools/train_coldstart.py": "reviewed_source_archive:tools/train_coldstart.py",
+    "runtime/artifact.json": "runs/20261016_final_head_reproduction/predictor/artifact.json",
+    "runtime/calibration.json": "runs/20261016_final_head_reproduction/predictor/calibration.json",
+    "artifacts/runtime.zip": "runs/20261016_final_head_reproduction/runtime.zip"
+  },
+  "publication_status": "local_only_no_remote"
+}

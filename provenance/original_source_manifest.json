@@ -1,0 +1,123 @@
+{
+  "copied_members": [
+    {
+      "bytes": 2438,
+      "path": "coldstart/features.py",
+      "sha256": "a5fb8df7be3bf383d60855d468d89210d1c9150757aeb19ae48696b0491794b0"
+    },
+    {
+      "bytes": 881,
+      "path": "feature_ablation/subject_only/features.py",
+      "sha256": "e247861caf64cf50a8f05094c7e4d9f495702825867b6865a603155de50af5c6"
+    },
+    {
+      "bytes": 26071,
+      "path": "tools/fit_s4_shared_calibration.py",
+      "sha256": "339dc697103d9da0654e5ab4cbb3895ee35ecedb26e2aa16a14dd1204970e50d"
+    },
+    {
+      "bytes": 21069,
+      "path": "tools/local_evaluation.py",
+      "sha256": "ccfa1e07cea398fc1c910d96133ce27fcf277ead6e1e1a53aec749ce066ec92e"
+    },
+    {
+      "bytes": 18480,
+      "path": "tools/prepare_public_data.py",
+      "sha256": "778264e123fc1591bc440b1666f15b0dbd04738313dfab26c15e78eb854060ff"
+    },
+    {
+      "bytes": 11964,
+      "path": "tools/reproduce_final_s4_head.py",
+      "sha256": "55916aa5f2448c0d3b160a95769fe3cf457db327da748813a8d9663fe045ea72"
+    },
+    {
+      "bytes": 6815,
+      "path": "tools/reproduce_r1_partitions.py",
+      "sha256": "66d8cf77af29b32dcc41c1c7bf938b47a09f011505f53aedadb71b2bbb4e1239"
+    },
+    {
+      "bytes": 23738,
+      "path": "tools/run_kappa_selection.py",
+      "sha256": "8ea2affd4320ad16bcd1b5a5579009d7bdd8bafe0821c43b21ffc36c9b00ae75"
+    },
+    {
+      "bytes": 21910,
+      "path": "tools/run_multibench_study.py",
+      "sha256": "c42df6fcd5017b4b458cbd365b25b3c66a0238de257e58024239dd1b79723e8e"
+    },
+    {
+      "bytes": 22831,
+      "path": "tools/run_subject_text_nuisance_study.py",
+      "sha256": "06e91a635fdf6f7c817999e7947d13e7df33434d967cc8569929be766c26e30b"
+    },
+    {
+      "bytes": 9318,
+      "path": "tools/train_coldstart.py",
+      "sha256": "9ff20dc038446714f4af9b762bb3aa178ac84dd14138cfd18e5bd96886c5c4e1"
+    },
+    {
+      "bytes": 881,
+      "path": "runtime/features.py",
+      "sha256": "e247861caf64cf50a8f05094c7e4d9f495702825867b6865a603155de50af5c6"
+    },
+    {
+      "bytes": 12491,
+      "path": "runtime/model.py",
+      "sha256": "896c470484b47d8558adc4f231503e59c941e163c2f76741b2f68accb239eb39"
+    },
+    {
+      "bytes": 1293,
+      "path": "payload/public_raw/r1/allowlist.json",
+      "sha256": "34095d9218b71286f77086ae1715c1a055ba37a5a51501ee5358b25dba53d162"
+    },
+    {
+      "bytes": 673,
+      "path": "payload/public_raw/r2_statqa/allowlist.json",
+      "sha256": "88ea0a8dba3bc009ebb59a5cc56b15494dec2ad39f189317460c472c6e5f2910"
+    },
+    {
+      "bytes": 687,
+      "path": "payload/public_raw/r3_truthfulqa/allowlist.json",
+      "sha256": "0bf9db097af8e61503f52a2bc35e8935bdc01cb5561fb6b800fbe32649a4d5ce"
+    },
+    {
+      "bytes": 5565,
+      "path": "INPUT_REQUIREMENTS.json",
+      "sha256": "a90bc8cb0e2a509b45f0c0882e6a846a6fa6475928d9e638f4ecdbfedfb074d7"
+    }
+  ],
+  "delivery_proposal_sha256": "baf2f6cc4ed9ef77b9b5c662d7f1d03e2f90911b317841c46baebb09df81bb71",
+  "excluded_categories": [
+    "raw data and response bodies",
+    "frozen learned artifact and calibration files",
+    "private platform feedback",
+    "historical execution receipts and host environment records"
+  ],
+  "generated_members": [
+    {
+      "bytes": 3849,
+      "path": "README.html",
+      "sha256": "deb41210e6dc4b4df2c501da4940870874ec0f09c98783b6eea45f177404808a"
+    },
+    {
+      "bytes": 217,
+      "path": "requirements.txt",
+      "sha256": "cc7c51c2d2f3dd05032ce8fc9a82ad9efaa0fdb352406c522fab6ffe1c18cbc4"
+    },
+    {
+      "bytes": 24640,
+      "path": "release.py",
+      "sha256": "02093d858627a72caad641db92adb60107a79843f9907c090a357994fcf719fa"
+    }
+  ],
+  "runtime_parameter_identities": {
+    "artifact_sha256": "bc6961b07044c097c40f6dd2af2c1c4e76a265be16678df563627d0d0f4bfd8e",
+    "calibration_semantic_sha256": "df5552a162ab7761357133060b8ee016bc844f9fddf518b3c9c55957b73a173b"
+  },
+  "schema": "paiec-s4-method-source-review-v1",
+  "scope": "Local source-review object only; no public-release permission or license assignment.",
+  "source_archive": {
+    "path": "dist/paiec_reproduction_review.zip",
+    "sha256": "267b9d0050837a9d05ad5a47ccce78594fedf2770c19e8f39af1282f07045f9e"
+  }
+}

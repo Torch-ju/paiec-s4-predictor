@@ -1,0 +1,18 @@
+PAIEC S4 predictor — local repository
+
+This repository has not been published and does not grant a project-wide license.
+It contains project-maintained source, frozen fitted parameters, and source/input
+identity metadata. It does not contain the official BLE implementation, raw MDB
+data, private formative feedback, account records, or API credentials.
+
+The frozen runtime matches the four members of the submitted S4 archive. Local
+source provenance is recorded in provenance/source_origins.json. Provenance is
+not a determination of exclusive ownership or permission to redistribute data
+or derived artifacts. A human rights holder and a project license remain to be
+confirmed before public release.
+
+The original attribution and licensing assessment is preserved verbatim in
+provenance/ATTRIBUTION_SOURCE_REVIEW.txt. Its archive references identify the
+historical review object; it is not a claim that all those archives are included
+in this repository. Third-party dependencies are imported, not vendored. Their
+own licenses apply. Obtain training data under the actual upstream conditions.

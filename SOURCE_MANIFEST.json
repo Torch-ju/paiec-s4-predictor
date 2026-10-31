@@ -1,0 +1,153 @@
+{
+  "schema": "paiec-s4-method-source-review-v1",
+  "repository_scope": "local standalone S4 candidate code repository",
+  "copied_members": [
+    {
+      "path": ".gitignore",
+      "bytes": 235,
+      "sha256": "6fa965bd013e43b79df3b13e36932903473ee4c831886ee2d8d9230f7e1b9166"
+    },
+    {
+      "path": "artifacts/runtime.zip",
+      "bytes": 18518,
+      "sha256": "fe88e5dc6bcfcde35226ee41dca470460a1bf314d2c0efd97d0bc8914158e3b5"
+    },
+    {
+      "path": "coldstart/features.py",
+      "bytes": 2438,
+      "sha256": "a5fb8df7be3bf383d60855d468d89210d1c9150757aeb19ae48696b0491794b0"
+    },
+    {
+      "path": "feature_ablation/subject_only/features.py",
+      "bytes": 881,
+      "sha256": "e247861caf64cf50a8f05094c7e4d9f495702825867b6865a603155de50af5c6"
+    },
+    {
+      "path": "INPUT_REQUIREMENTS.json",
+      "bytes": 5565,
+      "sha256": "a90bc8cb0e2a509b45f0c0882e6a846a6fa6475928d9e638f4ecdbfedfb074d7"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1098,
+      "sha256": "5052a8c7b661d2090d9dcbfc620a2750ee043f54a168f21f4cbca0742c2d2e11"
+    },
+    {
+      "path": "payload/public_raw/r1/allowlist.json",
+      "bytes": 1293,
+      "sha256": "34095d9218b71286f77086ae1715c1a055ba37a5a51501ee5358b25dba53d162"
+    },
+    {
+      "path": "payload/public_raw/r2_statqa/allowlist.json",
+      "bytes": 673,
+      "sha256": "88ea0a8dba3bc009ebb59a5cc56b15494dec2ad39f189317460c472c6e5f2910"
+    },
+    {
+      "path": "payload/public_raw/r3_truthfulqa/allowlist.json",
+      "bytes": 687,
+      "sha256": "0bf9db097af8e61503f52a2bc35e8935bdc01cb5561fb6b800fbe32649a4d5ce"
+    },
+    {
+      "path": "provenance/ATTRIBUTION_SOURCE_REVIEW.txt",
+      "bytes": 4564,
+      "sha256": "287c06a2179c84aaf6d4b0077916bef54351a7bee69d5a464df348beacd7c610"
+    },
+    {
+      "path": "provenance/original_source_manifest.json",
+      "bytes": 4173,
+      "sha256": "a0aa05c4cf00427b07049eecdeb300b2f8969d40ecb7c49c3ae5167ed6f1726c"
+    },
+    {
+      "path": "provenance/repository_origin.json",
+      "bytes": 2467,
+      "sha256": "2353025ed4636340cbf5d5bb42050f80b68596352c9fa71507ad0caf44ea95c2"
+    },
+    {
+      "path": "provenance/source_origins.json",
+      "bytes": 2502,
+      "sha256": "d4245efdbf2d112e9a3595e512c37a87d880e1b2d4b13c010807b7c7eb850732"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6101,
+      "sha256": "a63323d1b15ffb97344ed8db3a500e2e0c40fd500934f45870204b7edc24d63d"
+    },
+    {
+      "path": "release.py",
+      "bytes": 11286,
+      "sha256": "fffc0448baaf5545c7f9af91668cc2ee527efa52d19d4fc552df8587a94309f1"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 217,
+      "sha256": "cc7c51c2d2f3dd05032ce8fc9a82ad9efaa0fdb352406c522fab6ffe1c18cbc4"
+    },
+    {
+      "path": "runtime/artifact.json",
+      "bytes": 45422,
+      "sha256": "bc6961b07044c097c40f6dd2af2c1c4e76a265be16678df563627d0d0f4bfd8e"
+    },
+    {
+      "path": "runtime/calibration.json",
+      "bytes": 625,
+      "sha256": "6731a6a1335b2054f855e0b60ecc7903a2753c74780f34e5e60baf71a5749924"
+    },
+    {
+      "path": "runtime/features.py",
+      "bytes": 881,
+      "sha256": "e247861caf64cf50a8f05094c7e4d9f495702825867b6865a603155de50af5c6"
+    },
+    {
+      "path": "runtime/model.py",
+      "bytes": 12491,
+      "sha256": "896c470484b47d8558adc4f231503e59c941e163c2f76741b2f68accb239eb39"
+    },
+    {
+      "path": "tools/fit_s4_shared_calibration.py",
+      "bytes": 26071,
+      "sha256": "339dc697103d9da0654e5ab4cbb3895ee35ecedb26e2aa16a14dd1204970e50d"
+    },
+    {
+      "path": "tools/local_evaluation.py",
+      "bytes": 21069,
+      "sha256": "ccfa1e07cea398fc1c910d96133ce27fcf277ead6e1e1a53aec749ce066ec92e"
+    },
+    {
+      "path": "tools/prepare_public_data.py",
+      "bytes": 18480,
+      "sha256": "778264e123fc1591bc440b1666f15b0dbd04738313dfab26c15e78eb854060ff"
+    },
+    {
+      "path": "tools/reproduce_final_s4_head.py",
+      "bytes": 11964,
+      "sha256": "55916aa5f2448c0d3b160a95769fe3cf457db327da748813a8d9663fe045ea72"
+    },
+    {
+      "path": "tools/reproduce_r1_partitions.py",
+      "bytes": 6815,
+      "sha256": "66d8cf77af29b32dcc41c1c7bf938b47a09f011505f53aedadb71b2bbb4e1239"
+    },
+    {
+      "path": "tools/run_kappa_selection.py",
+      "bytes": 23738,
+      "sha256": "8ea2affd4320ad16bcd1b5a5579009d7bdd8bafe0821c43b21ffc36c9b00ae75"
+    },
+    {
+      "path": "tools/run_multibench_study.py",
+      "bytes": 21910,
+      "sha256": "c42df6fcd5017b4b458cbd365b25b3c66a0238de257e58024239dd1b79723e8e"
+    },
+    {
+      "path": "tools/run_subject_text_nuisance_study.py",
+      "bytes": 22831,
+      "sha256": "06e91a635fdf6f7c817999e7947d13e7df33434d967cc8569929be766c26e30b"
+    },
+    {
+      "path": "tools/train_coldstart.py",
+      "bytes": 9318,
+      "sha256": "9ff20dc038446714f4af9b762bb3aa178ac84dd14138cfd18e5bd96886c5c4e1"
+    }
+  ],
+  "generated_members": [],
+  "manifest_scope": "Repository deliverables excluding this manifest, .git, generated outputs and ignored caches; not a scientific experiment"
+}

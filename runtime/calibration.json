@@ -1,0 +1,22 @@
+{
+  "calibration_version": "paiec-provider-agnostic-masked-shared-v1",
+  "cmmlu_labels_in_shared_theta": false,
+  "method": "provider-agnostic-shared-logit-offset",
+  "seen_providers": [
+    "(agent scaffold)",
+    "Alibaba",
+    "Amazon",
+    "Anthropic",
+    "Cohere",
+    "DeepSeek",
+    "Google",
+    "Meta",
+    "Mistral",
+    "OpenAI",
+    "Unknown",
+    "xAI"
+  ],
+  "source_input_manifest_sha256": "94a384d806d4c83da434ca2d0c17ddfcec12ecc37d9642cba384ba68f792f85c",
+  "source_summary_sha256": "28d36683767aa50c5c63da2841df0f1546d19a6cc435e9b2f7f714ecc47b5559",
+  "theta": 0.013099694897717498
+}
