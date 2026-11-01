@@ -29,8 +29,8 @@
     },
     {
       "path": "NOTICE.txt",
-      "bytes": 1098,
-      "sha256": "5052a8c7b661d2090d9dcbfc620a2750ee043f54a168f21f4cbca0742c2d2e11"
+      "bytes": 1086,
+      "sha256": "e51d14a5b689ec2e020f50614f3572d8e5ea5d335d7d2fae731d083110edf9a0"
     },
     {
       "path": "payload/public_raw/r1/allowlist.json",
@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6101,
-      "sha256": "a63323d1b15ffb97344ed8db3a500e2e0c40fd500934f45870204b7edc24d63d"
+      "bytes": 7195,
+      "sha256": "9b59b49c0c46562ef10d1013b114f0110acb843f1736be4b419f48e30aea4f9b"
     },
     {
       "path": "release.py",

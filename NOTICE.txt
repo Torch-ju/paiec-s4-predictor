@@ -1,6 +1,6 @@
-PAIEC S4 predictor — local repository
+PAIEC S4 predictor — provenance and licensing notice
 
-This repository has not been published and does not grant a project-wide license.
+This repository does not grant a project-wide license.
 It contains project-maintained source, frozen fitted parameters, and source/input
 identity metadata. It does not contain the official BLE implementation, raw MDB
 data, private formative feedback, account records, or API credentials.

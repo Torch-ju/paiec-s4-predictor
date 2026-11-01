@@ -1,27 +1,28 @@
-# PAIEC S4 predictor
+# PAIEC S4 Predictor
 
-系统配置先验与稀疏标签更新的轻量预测器。当前仓库整理的是 **S4 候选**：
-它先从允许的系统配置估计成功概率，再利用同组已揭示标签进行固定 spike–Beta 更新。
-推理只使用 Python 标准库，不调用大模型接口，不需要 GPU。
+S4 is a group-level probability predictor developed for the Predictive AI Evaluation Competition. Given an AI system configuration and the labels revealed for a subject–benchmark group, it estimates the probability that the system will answer a target correctly. The predictor does not run the target system.
 
-这是本地 Git 仓库，尚未发布到 GitHub。原始研究工作区和已冻结材料保留。
+A task-weighted logistic model produces a configuration-derived prior. An out-of-fold, provider-masked correction adjusts that prior, and a fixed spike–Beta update incorporates the revealed labels. At inference, the predictor uses only Python's standard library; it does not call a model API or require a GPU.
 
-## 先看哪些代码
+## Repository guide
 
-| 文件 | 作用 |
+| Path | Purpose |
 | --- | --- |
-| [runtime/model.py](runtime/model.py) | 概率预测、共享校准、当前组标签过滤与后验更新 |
-| [runtime/features.py](runtime/features.py) | 完整可见 subject 字典的稳定序列化 |
-| [runtime/artifact.json](runtime/artifact.json) | 冻结词表、IDF、系数与混合参数 |
-| [runtime/calibration.json](runtime/calibration.json) | 共享 logit 偏移和适用 provider 集合 |
-| [tools/reproduce_final_s4_head.py](tools/reproduce_final_s4_head.py) | 从四个公开训练任务重建最终配置头 |
-| [tools/fit_s4_shared_calibration.py](tools/fit_s4_shared_calibration.py) | 从任务留出预测拟合共享校准 |
-| [tools/local_evaluation.py](tools/local_evaluation.py) | 组、标签预算与 Brier ALC 的本地计算 |
-| [release.py](release.py) | 核对源码、生成输入清单和打包预测器 |
+| [runtime/model.py](runtime/model.py) | Prediction, calibration, group-label filtering and posterior update |
+| [runtime/features.py](runtime/features.py) | Stable serialization of the visible subject configuration |
+| [runtime/artifact.json](runtime/artifact.json) | Frozen vocabulary, IDF values, coefficients and mixture parameters |
+| [runtime/calibration.json](runtime/calibration.json) | Frozen shared correction and provider set |
+| [artifacts/runtime.zip](artifacts/runtime.zip) | Original four-file Codabench submission archive |
+| [tools/reproduce_final_s4_head.py](tools/reproduce_final_s4_head.py) | Reconstruct the four-task final configuration head |
+| [tools/fit_s4_shared_calibration.py](tools/fit_s4_shared_calibration.py) | Fit the shared calibration from out-of-fold predictions |
+| [tools/local_evaluation.py](tools/local_evaluation.py) | Local group-level Brier ALC calculation |
+| [release.py](release.py) | Verify source files, create an input manifest and package the runtime |
 
-## 推理示例
+The four files in `runtime/` are byte-identical to the members of `artifacts/runtime.zip`, the archive associated with Codabench submission **994883**. The ZIP is retained as the original submitted archive.
 
-在仓库根目录运行下列合成输入示例。不读取真实数据，不产生 API 费用：
+## Run the predictor
+
+From the repository root, the following synthetic example calls `predict` without training data or network access:
 
 ```python
 import sys
@@ -36,43 +37,32 @@ p1 = predict([subject, item], labeled)
 print(p0, p1)
 ```
 
-预测器只使用 subject 字段及同 subject、同匿名 benchmark 的当前标签。
-对固定标签历史，同组不同题目得到相同概率；它不建模逐题难度。
+The first input describes the subject and the second describes the target item. `labeled` contains the outcomes revealed by the evaluation interface. Only labels for the same subject and anonymous benchmark are used in the update. The output is a probability in `[0, 1]`.
 
-## 固定候选与证据范围
+The predictor does not use item text or item features. For a fixed subject–benchmark group and revealed-label history, it assigns the same probability to every item; it does not model item-specific difficulty.
 
-`runtime/` 的四个文件逐字节对应 `artifacts/runtime.zip`，即已有提交 **994883** 的 S4 运行包。
-该次形成性评测显示 Brier ALC **0.164554**。这不是最终共同测试成绩或排名；
-不同形成性提交重采样隐藏数据，分差不能解释为配对改进。
+## Evaluation scope
 
-该运行头由四任务的 177,977 条有效响应、252 个组拟合。
-本文五任务开发比较使用独立的留任务训练头，不能用这个全 S4 头在其训练任务上冒充留出评测。
-仓库覆盖固定候选的推理、数据准备、最终头拟合和校准复现链。
-`tools/run_*` 是该链调用的历史研究模块；它们的独立实验入口还依赖原工作区的数据布局。
-本仓库不声称已封装全部历史实验，也不把下列文件检查称为重新训练或效果复验。
+The final runtime head was fitted on four public training tasks, with 177,977 valid responses across 252 groups. The five-task development study uses separate leave-one-task-out heads; the final four-task head must not be treated as a held-out model on tasks used to fit it.
 
-## 本地核对与封包
+Formative submissions use resampled hidden subsets. Their scores are not paired comparisons and do not establish a final common-test result or rank. The repository supports inference and reconstruction of the final head and calibration; it does not claim to package every historical experiment, and private formative outcomes cannot be independently reconstructed from these files.
+
+## Verify and package
+
+From the repository root:
 
 ```text
 python -I -B release.py verify-source
 python -I -B release.py pack-runtime --artifact runtime/artifact.json --calibration runtime/calibration.json --output runtime_copy.zip
 ```
 
-第二条命令要求输出文件尚不存在。它核对冻结参数后封装同一组四成员；
-成员身份应与已提交包一致，ZIP 容器的字节可能因压缩环境不同而变化。
-直接需要原始提交对象时使用 `artifacts/runtime.zip`。
+The `pack-runtime` output path must not already exist. It checks the frozen parameters and packages the same four runtime members. ZIP container bytes may vary between compression environments; use `artifacts/runtime.zip` when the original submitted archive is required.
 
-## 从合法取得的训练输入复现
+## Reconstruct the fitted runtime
 
-先按 [INPUT_REQUIREMENTS.json](INPUT_REQUIREMENTS.json) 中的固定 MDB revision 和文件清单取得数据。
-仓库只包含 allowlist 与输入身份，不附带原始题文、标签或响应表，也不自动下载。
-训练环境版本见 [requirements.txt](requirements.txt)；原运行使用 Python 3.12.3。
-安装依赖、获取数据和完整训练应在自己的已批准资源范围内执行。
+The raw question text, labels and response tables are not included or downloaded automatically. Obtain the permitted MeasurementDB inputs identified in [INPUT_REQUIREMENTS.json](INPUT_REQUIREMENTS.json), including its pinned revision, paths and SHA-256 checksums. Place them under the indicated `payload/public_raw/` paths. The repository includes the corresponding allowlists.
 
-<details>
-<summary>数据准备、校准与训练命令</summary>
-
-在仓库根目录执行，各输出目录应为新目录：
+The recorded training run used Python 3.12.3. The preparation and training dependencies are listed in [requirements.txt](requirements.txt); they are not needed for ordinary runtime inference. Run the commands below from the repository root with fresh output directories:
 
 ```text
 python tools/prepare_public_data.py --data-root payload/public_raw/r1 --allowlist payload/public_raw/r1/allowlist.json --output reproduction/normalized/r1/records.jsonl --manifest reproduction/normalized/r1/manifest.json
@@ -85,14 +75,8 @@ python tools/reproduce_final_s4_head.py --input-manifest reproduction/s4_input_m
 python -I -B release.py pack-runtime --artifact reproduction/head/artifact.json --calibration reproduction/calibration/calibration.json --output reproduction/runtime.zip
 ```
 
-输入字节身份、最终头参数和校准语义均有固定检查。原规范化环境使用 Windows 文本换行，
-R1 分任务输出为 LF；换行或库版本变化可能使字节检查停止，不能据此放宽输入要求。
-历史运行已经完成分阶段复现，本次仓库整理没有重新执行训练。
+The pipeline checks input byte identities and the final head and calibration semantics. The recorded normalization used Windows text newlines, while the R1 task partitions used LF. Newline or library-version differences can stop byte-level checks; they should be investigated rather than bypassed. These commands describe the documented reconstruction workflow, not a newly executed experiment.
 
-</details>
+## Sources and rights
 
-## 来源与许可
-
-[NOTICE.txt](NOTICE.txt) 记录当前许可状态；[provenance/source_origins.json](provenance/source_origins.json)
-对应实际执行源码快照。没有为第三方材料或本项目自动套用 MIT 等许可证。
-公开前需确定发布账号、具体内容与权利人的许可选择。
+[NOTICE.txt](NOTICE.txt) records the attribution and license status; [provenance/source_origins.json](provenance/source_origins.json) identifies source snapshots. Provenance records preserve the context of earlier reviews; historical references to publication status or archive identity do not describe the current hosting status. No project-wide license is granted by this README. Third-party components and data remain subject to their own terms.
